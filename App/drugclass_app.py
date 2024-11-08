@@ -41,7 +41,7 @@ examples = [
 
 title = "Drug Classification Model"
 description = "Enter the details to correctly identify Drug type?"
-article = "This app is for CTCD_for_Machine_Learning_Models.
+article = "This app is for CTCD_for_Machine_Learning_Models."
 
 gr.Interface(
     fn=predict_drug,
