@@ -24,7 +24,7 @@ hf-login:
 push-hub:
 	huggingface-cli upload CTCD_for_Machine_Learning_Models ./App --repo-type=space --commit-message="Sync App files"
 	huggingface-cli upload CTCD_for_Machine_Learning_Models ./Model /Model --repo-type=space --commit-message="Sync Model"
-	huggingface-cli upload CTCD_for_Machine_Learning_Models ./Results /Metrics --repo-type=space --commit-message="Sync Model"
+	huggingface-cli upload CTCD_for_Machine_Learning_Models ./Output /Metrics --repo-type=space --commit-message="Sync Model"
 
 deploy:
 	hf-login push-hub
