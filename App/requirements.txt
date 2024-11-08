@@ -1,2 +1,2 @@
 scikit_learn
-slops
+skops
