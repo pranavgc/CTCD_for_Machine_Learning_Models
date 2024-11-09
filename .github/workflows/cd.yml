@@ -8,16 +8,17 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  sync-to-hub:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Deployment To Hugging Face
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Add remote 
         env:
-          HF: ${{ secrets.HF2 }}
-        run: git remote add space https://Lich1183:$HF2@huggingface.co/spaces/Licht1183/CTCD_Drug_Classification_Model
+          HF: ${{ secrets.HF }}
+        run: git remote add space https://Licht1183:$HF@huggingface.co/spaces/Licht1183/CTCD_Drug_Classification_Model
       - name: Push to hub
         env:
-          HF: ${{ secrets.HF2 }}
-        run: git push --force https://Licht1183:$HF2@huggingface.co/spaces/Licht1183/CTCD_Drug_Classification_Model main
+          HF: ${{ secrets.HF }}
+        run: git push https://Licht1183:$HF@huggingface.co/spaces/Licht1183/CTCD_Drug_Classification_Model main
