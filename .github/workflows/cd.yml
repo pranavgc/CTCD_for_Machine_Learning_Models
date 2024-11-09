@@ -16,4 +16,8 @@ jobs:
       - name: Deployment To Hugging Face
         env:
           HF: ${{ secrets.HF }}
-        run: make deploy HF=$HF
+        run: run: git remote add space https://Lich1183:$HF@huggingface.co/spaces/Licht1183/CTCD_Drug_Classification_Model
+			- name: Push to hub
+        env:
+          HF: ${{ secrets.HF }}
+        run: git push --force https://Licht1183:$HF@huggingface.co/spaces/Licht1183/CTCD_Drug_Classification_Model main
